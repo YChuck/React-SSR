@@ -1,10 +1,12 @@
 import axios from 'axios'
 
 const GET_LIST = "INDEX/GET_LIST"
-const changeList = list => ({
-    type: GET_LIST,
-    list
-})
+const changeList = list => {
+    return ({
+        type: GET_LIST,
+        list
+    })
+}
 
 export const getIndexList = server => {
     return (dispatch, getState, axiosInstance) => {
